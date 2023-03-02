@@ -1,4 +1,8 @@
 
+const fahrenheitToCelsius = (temp) =>{
+    return (temp-32) * (5/9);
+}
+
 const fetchWeather = async(inputElement,divElement) =>{
     const query = inputElement.value;
     inputElement.value = '';
@@ -13,9 +17,7 @@ const fetchWeather = async(inputElement,divElement) =>{
     }
    
 }
-const fahrenheitToCelsius = (temp) =>{
-    return (temp-32) * (5/9);
-}
+
 //Function to get display (on divElement) weather whenever the buttonElement is clicked 
 const queryLocation =(buttonElement,inputElement,divElement) =>{
     buttonElement.addEventListener('click',function(){
